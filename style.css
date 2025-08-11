@@ -1,87 +1,268 @@
 body {
-  background-color: rgb(19, 19, 19);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.main_div {
-  position: relative;
-}
-
-.face {
-  height: 300px;
-  width: 300px;
-  background-color: pink;
-  border-radius: 50%;
-  position: relative;
-  border: 2px solid black;
-  z-index: 1;
-}
-
-.ear {
-  height: 100px;
-  width: 100px;
-  background-color: pink;
-  border-radius: 50%;
-  position: absolute;
-  top: -40px;
-  border: 2px solid black;
-  z-index: 0;
-}
-
-.left-ear {
-  left: -20px;
-}
-
-.right-ear {
-  right: -0px;
-}
-
-.eye {
-  height: 60px;
-  width: 60px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 80px;
-  border: 2px solid black;
-}
-
-.left-eye {
-  left: 50px;
-}
-
-.right-eye {
-  right: 50px;
-}
-
-.pupil {
-  height: 30px;
-  width: 30px;
-  background-color: black;
-  border-radius: 50%;
-  margin: 15px;
-}
-
-.nose {
-  height: 60px;
-  width: 100px;
-  background-color: deeppink;
-  border: 2px solid black;
-  border-radius: 30px;
-  position: absolute;
-  bottom: 60px;
-  left: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nostril {
-  height: 25px;
-  width: 25px;
-  background-color: black;
-  border-radius: 50%;
-}
+    margin: 0;
+     background-repeat: no-repeat;
+    background-size: 1400px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(141, 87, 177);
+  }
+  
+  .head,
+  .left_arm,
+  .torso,
+  .right_arm,
+  .left_leg,
+  .right_leg {
+    background-color: yellowgreen;
+  }
+  
+  .head {
+    width: 200px;
+    margin: 0 auto;
+    height: 150px;
+    border-radius: 200px 200px 0 0;
+    margin-bottom: 10px;
+  }
+  
+  .eyes {
+    position: relative;
+    top: 100px;
+  }
+  
+  .left_eye,
+  .right_eye {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+  }
+  
+  .left_eye {
+    margin-left: 30px;
+  }
+  
+  .right_eye {
+    margin-left: 100px;
+  }
+  
+  .upper_body {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .left_arm,
+  .right_arm {
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    margin-top: 20px;
+  }
+  
+  .left_arm {
+    margin-right: 10px;
+  }
+  
+  .left_arm {
+    margin-right: 10px;
+  }
+  
+  .right_arm {
+    margin-left: 10px;
+  }
+  
+  .torso {
+    width: 200px;
+    height: 200px;
+    border-radius: 0 0 50px 50px;
+    transition: border-radius 1s;
+  }
+  
+  .lower_body {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .left_leg,
+  .right_leg {
+    width: 40px;
+    height: 200px;
+    border-radius: 0 0 100px 100px;
+    display: inline-block;
+  }
+  
+  .left_leg {
+    margin-left: 45px;
+  }
+  
+  .right_leg {
+    margin-left: 30px;
+  }
+  .robots:hover .head {
+    animation: movehead 2s infinite;
+    background-color:  rgb(62, 226, 21);
+  }
+  
+  .robots:hover .torso {
+    border-radius: 40%;
+    animation: movetorso 8s infinite;
+    background-color: rgb(62, 226, 21);
+  }
+  
+  .robots:hover .left_arm {
+    animation: moveleftarm 5s infinite;
+    background-color: rgb(62, 226, 21);
+  }
+  
+  .robots:hover .right_arm {
+    animation: moverightarm 5s infinite;
+    background-color: rgb(62, 226, 21);
+  }
+  
+  .robots:hover .left_leg {
+    animation: moveleftleg 1s infinite;
+    background-color:  rgb(62, 226, 21);
+  }
+  
+  .robots:hover .right_leg {
+    animation: moverightleg 1s infinite;
+    background-color: rgb(62, 226, 21);
+  }
+  
+  @keyframes movehead {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(90deg);
+    }
+  
+    50% {
+      transform: rotate(180deg);
+    }
+  
+    75% {
+      transform: rotate(360deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes moveleftarm {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    50% {
+      transform: rotate(180deg);
+      transform-origin: top center;
+    }
+  
+    75% {
+      transform: rotate(360deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+  
+  @keyframes moverightarm {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+  
+    50% {
+      transform: rotate(-180deg);
+      transform-origin: top center;
+    }
+  
+    75% {
+      transform: rotate(-360deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+  
+  @keyframes moveleftleg {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(20deg);
+    }
+  
+    50% {
+      transform: rotate(40deg);
+    }
+  
+    75% {
+      transform: rotate(20deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes moverightleg {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-20deg);
+    }
+  
+    50% {
+      transform: rotate(-40deg);
+    }
+  
+    75% {
+      transform: rotate(-20deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes movetorso {
+    0% {
+      transform: rotate(0deg);
+    }
+    50%{
+      transform: rotate(360deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+  }
